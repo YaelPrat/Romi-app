@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/letters">Letters</a></li>
+                <li><a href="/recommendations">Recommendations</a></li>
+                <li><a href="/home_seek">Home Seek</a></li>
+
+            </ul>
+        </nav>
+    </header>
+        <div class="content">
+            <h1>לצאת לכל מסע עם שותף שאת סומכת עליו</h1>
+            <br>
+            <img src="{{ url_for('static', filename='love.jpg') }}" width="300" height="400">
+            <h3>ועכשיו באמת, איזה המלצות כבר אפשר לתת למלכת הגוגל מפות, כל קהילות הפייסבוק ודפיי האינסטגרם הכי שווים?  </h3>
+            <h3>אי אפשר.</h3>
+            <h3>סומכת עלייך שתכיני לכולנו דף המלצות לביקורים</h3>
+        </div>
+
+</body>
+</html>

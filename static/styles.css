@@ -1,0 +1,169 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&display=swap');
+
+/* Reset default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font family */
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+/* Set background color and basic styles */
+body {
+    background-color: #f7f7f7; /* Light gray */
+    color: #333; /* Dark gray */
+    padding: 20px;
+    font-family: 'Alef', sans-serif; /* Apply Alef font to content */
+
+}
+
+/* Header styles */
+
+nav {
+    position: fixed; /* Fix navigation bar to the top of the screen */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure navigation bar takes up full width */
+    height: 40px; /* Set desired height */
+    background-color: #ffcccc; /* Light pink */
+    padding: 10px 20px; /* Add padding to top and bottom */
+    box-sizing: border-box; /* Ensure padding is included in total height */
+}
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Dark gray */
+}
+
+nav ul li a:hover {
+    color: #ff6666; /* Pink */
+}
+
+
+/* Responsive styles */
+@media (max-width: 405px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
+
+    nav a {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    header {
+        height: auto; /* Adjust header height for multiple lines */
+        padding: 10px 0; /* Add padding to accommodate vertical layout */
+    }
+     p {
+        font-size: 14px; /* Smaller font size for paragraphs */
+    }
+    h2{
+        font-size: 18px;
+    }
+}
+
+
+/* Container for centering content */
+.centered-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    padding-top: 60px;
+
+}
+
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center; /* Center text inside the content, if needed */
+    direction: rtl; /* Set the default direction to right-to-left */
+
+}
+
+
+h1, h2 {
+    color: #ff6666; /* Pink */
+}
+h3 {
+    color: #ffcc99;
+}
+
+/* Recommendation cards styles */
+.recommendation-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: calc(33.33% - 20px); /* Adjust as needed */
+    background-color: #fff; /* White */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h2 {
+    margin-top: 10px;
+    color: #333; /* Dark gray */
+
+}
+.card a{
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.card p {
+    margin-top: 10px;
+    color: #666; /* Medium gray */
+}
+
+img {
+    max-width: 100%; /* Ensures the image does not exceed the width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    border: 2px solid #ddd; /* Adds a border around the image */
+    border-radius: 8px; /* Rounds the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.2s; /* Adds a transition effect on hover */
+}
+
+img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+.centered-div {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Optional: Set the height to the full viewport height */
+}
+
+.ltr-content {
+    direction: ltr; /* Set direction to left-to-right */
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Seek</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/letters">Letters</a></li>
+                <li><a href="/recommendations">Recommendations</a></li>
+                <li><a href="/home_seek">Home Seek</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <h1> חנות מוצרים לרגעי געגוע </h1>
+        <h3>ניתן להקיש על המוצר ולעבור לחוויה חוץ גופית כמתואר בכותרת</h3>
+
+<!--        <a href="https://www.youtube.com/watch?v=p0BJAK1555Y">שיר לשמוע כשקצת עצובים</a>-->
+        <div class="recommendation-cards">
+            {% for home_seek_item in home_seek_items %}
+            <div class="card">
+
+                <h2>{{ home_seek_item['title'] }}</h2>
+                <p>{{ home_seek_item['description'] }}</p>
+                <a href="{{home_seek_item['url']}}" target="_blank">
+                     <img src="{{ home_seek_item['image_url'] }}" alt="{{ home_seek_item['title'] }}">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

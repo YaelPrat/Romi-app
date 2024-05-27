@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ letter['title'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/letters">Letters</a></li>
+                <li><a href="/recommendations">Recommendations</a></li>
+                <li><a href="/home_seek">Home Seek</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="letter-detail">
+            <h1>{{ letter['title'] }}</h1>
+            <p>{{ letter['description']|safe }}</p>
+            {% if letter['image_url'] %}
+                <img src="{{ url_for('static', filename=letter['image_url']) }}" alt="{{ letter['title'] }}"  width="300" height="400">
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
