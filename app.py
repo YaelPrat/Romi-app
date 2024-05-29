@@ -18,9 +18,15 @@ recommendations = [
 letters_list = [
     {
         'id' : 1,
-        'title': 'Yaels',
-        'description': 'I will miss you kaki',
-        'image_url': 'https://example.com/coffee.jpg'
+        'title': 'יעלי',
+        'description': """רומאלז ודניאל
+איזה כיף לכם שלמרות כל החששות והבירוקרטיה אתם מחליטים לצאת למסע שהוא חוויה לכל החיים.
+מאחלת לכם להמשיך לחלום, לדעת בדיוק איך אתם מגיעים לכל חלום ומטרה. הדרך לא תמיד חלקה אבל מכל דבר לומדים. 
+מאחלת שתבנו את האימפרייה שלכם, כי אם מישהו יכול לבנות אימפרייה זה אתם, ועוד ברומא מקום שיצאו ממנו אימפריות לא קטנות בכלל
+
+אני אוהבת אתכם מאוד, אתם משפחה מבחירה עבורי
+"""
+        # 'image_url': 'https://example.com/coffee.jpg'
     },
     {
         'id' : 2,
@@ -109,7 +115,28 @@ letters_list = [
     'title': "אור",
     'description': """ """,
     'image_url': "Orr.jpeg"
+    },
+    {
+        'id':9,
+        'title': 'אמה',
+        "description": """אהובים שלי❤️<br><br>
+כמה שתהיו חסרים לי כמה שאני אוהבת אתכם.<br>         
+אני מאחלת לכם המון בהצלחה בדרך חיים החדשה שלכם ושתמיד תדעו שאנחנו כולנו איתכם גם אם לא פיזית בלב💘<br>          
+מאחלת לכם שתתקעו הרבה הרבה פיצות🍕<br>           
+ותהנו מכל יום ויום שאתם שם<br>          
+תמשיכו עם הצחוקים שלכם והביחד שלכם<br>          
+        מאחלת לכם שגם שהכי הכי קשה תדעו להתגבר ולזכור שיש לכם אחד את השני ושהכל הכל לטובה.<br>
+עם זאת וכל העצב מאחלת לכם שתעשו חייאיייםםם<br>          
+מטורפים ותהנו שם מהכל וזאת חוויה חד פעמית ותנצלו רוצה היטב היטב🦄<br>        
+מבטיחה לבקר אוהבת ומתגעגעת תמיד אמה❤️           
+        """
     }
+    # ,
+    # {
+    #     'id':10,
+    # 'title': "",
+    # 'description': """ """
+    # }
 
 ]
 # {
@@ -155,7 +182,7 @@ def letters():
 
 @app.route('/recommendations')
 def recommendations_page():
-    return render_template('recommendations.html', recommendations=recommendations)
+    return render_template('recommendations.html')
 
 
 @app.route('/home_seek')
